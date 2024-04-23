@@ -32,7 +32,7 @@ As each tile contains images of different dimension we pachify the images into f
 
 Image             |  Mask
 :-------------------------:|:-------------------------:
-![Alternate text](image_part_001.jpg)  |  ![Alternate text](image_part_001.png)
+![Alternate text](/readme/Tile_4_patch_2_0_image_part_002.jpg)  |  ![Alternate text](/readme/Tile_4_patch_2_0_image_part_002.png)
  
 
 ## Downloasd Dataset
@@ -107,7 +107,7 @@ Validation handle automatically during taining and after each (this can be contr
 ### Training on Single GPU
 
 ```
-cd project_file
+cd project
 python train.py --gpu "0" \
     --root_dir YOUR_ROOT_DIR \
     --dataset_dir YOUR_DATASET_DIR \
@@ -119,7 +119,7 @@ python train.py --gpu "0" \
 ### Training on Multi-GPU
 
 ```
-cd project_file
+cd project
 python train.py --gpu "0,1,2" \
     --root_dir YOUR_ROOT_DIR \
     --dataset_dir YOUR_DATASET_DIR \
@@ -143,7 +143,7 @@ Use checkpoint for transfer learning that's train using this repository you need
 For testing model on you test dataset use the following code
 
 ```
-cd project_file
+cd project
 python train.py --gpu "0" \
     --dataset_dir YOUR_DATASET_DIR \
     --model_name unet \
@@ -153,13 +153,4 @@ python train.py --gpu "0" \
 
 ## Result
 
-Models prediction after 30 epochs of training and each prediction `keras.metrics.MeanIou` accuracy.
-Unet             |
-:-------------------------:
-![Alternate text](u_test_img_107_acc_0.6093.png)
-U2net             |
-![Alternate text](u2_test_img_107_acc_0.6805.png)
-Unet + +             |
-![Alternate text](upp_test_img_107_acc_0.4618.png)
-Vnet             |
-![Alternate text](v_test_img_107_acc_0.0750.png)
+![Alternate text](/readme/prediction_result.png)
