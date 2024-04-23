@@ -1,0 +1,55 @@
+# Image Input/Output
+# ----------------------------------------------------------------------------------------------
+height : 256
+width : 256
+in_channels : 3
+num_classes : 6
+
+
+# Training
+# ----------------------------------------------------------------------------------------------
+model_name : mnet
+batch_size : 8
+epochs : 2000
+learning_rate : !!float 3e-4
+val_plot_epoch : 20
+augment : True
+transfer_lr : False
+finetune : True
+gpu : !!str 4
+experiment: finetune
+kkk
+
+# Dataset
+# ----------------------------------------------------------------------------------------------
+weights : False
+balance_weights : [0.14,0.53,0.09,0.10,0.13,0.004]
+patch_size : 256 # height = width, anyone is suitable
+dataset_dir : /home/mdsamiul/github_project/dubai_satellite_image_segmentation/data/Aerial_Image/
+root_dir : &root /home/mdsamiul/github_project/dubai_satellite_image_segmentation/
+train_size : 0.8
+x_train_dir : train/img/
+x_valid_dir : valid/img/
+x_test_dir : test/img/
+y_train_dir : train/mask/
+y_valid_dir : valid/mask/
+y_test_dir : test/mask/
+
+# Logger/Callbacks
+# ----------------------------------------------------------------------------------------------
+csv : True
+val_pred_plot : True
+lr : True
+tensorboard : True
+checkpoint : True
+early_stop : False
+patience : 800 # required for early_stopping, if accuracy does not change for 500 epochs, model will stop automatically
+
+# Evaluation
+# ----------------------------------------------------------------------------------------------
+load_model_name : sm_fpn_ex_regular_epochs_2000_12-Jun-22.hdf5
+load_model_dir : None
+checkpoint_path : /home/mdsamiul/github_project/flood_water_mapping_segmentation/model/mnet/mnet_ex_patchify_epochs_2000_02-Apr-22.hdf5
+
+single_image : True # if True, then only index x_test image will plot
+index : -1 # by default -1 means random image else specific index image provide by user
