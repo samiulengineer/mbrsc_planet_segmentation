@@ -4,9 +4,6 @@
 
 In this project we are tring to predict corresponding mask or segment image from given satelite image or feature. Image segmentation model can be use to extract real life objects from images, blur background, self driving car and other image processing tasks.
 
-## Environment Setup
-
-
 
 ## Logger Path
 
