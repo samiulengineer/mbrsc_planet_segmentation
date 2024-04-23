@@ -44,11 +44,10 @@ Download dataset from [here](https://www.google.com/url?q=https%3A%2F%2Fwww.kagg
 The following models are available in this repository. We train all the models for our project.
 
 * [UNET](https://link.springer.com/chapter/10.1007/978-3-319-24574-4_28)
-* [U2NET](https://paperswithcode.com/paper/u-2-net-going-deeper-with-nested-u-structure)
-* [MOD-UNET]()
+* [UNET++](https://link.springer.com/chapter/10.1007/978-3-030-00889-5_1)
 * [DNCNN](https://ieeexplore.ieee.org/document/7839189)
 * [VNET](https://arxiv.org/abs/1606.04797)
-* [UNET + +](https://link.springer.com/chapter/10.1007/978-3-030-00889-5_1)
+* [U2NET](https://paperswithcode.com/paper/u-2-net-going-deeper-with-nested-u-structure)
 
 ## Setup
 
