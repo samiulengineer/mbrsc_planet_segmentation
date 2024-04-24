@@ -18,14 +18,12 @@ During model training following paths will be created automatically.
 
 For our practice we use [Semantic segmentation of aerial imagery](https://www.kaggle.com/humansintheloop/semantic-segmentation-of-aerial-imagery) data from kaggle. The dataset contains 72 images which group into 8 larger tiles for 6 classes each tiles contain 9 images of same dimension or close to each other. The classes are as follows:
 
-| Name       | R   | G   | B   | Color                                                                                              |
-| ---------- | --- | --- | --- | -------------------------------------------------------------------------------------------------- |
-| Building   | 60  | 16  | 152 | <p align="center"><img width = "30" height= "20" src="./readme/label_building.png" /></p>   |
-| Land       | 132 | 41  | 246 | <p align="center"><img width = "30" height= "20" src="./readme/label_land.png" /></p>       |
-| Road       | 110 | 193 | 228 | <p align="center"><img width = "30" height= "20" src="./readme/label_road.png" /></p>       |
-| Vegetation | 254 | 221 | 58  | <p align="center"><img width = "30" height= "20" src="./readme/label_vegetation.png" /></p> |
-| Water      | 226 | 169 | 41  | <p align="center"><img width = "30" height= "20" src="./readme/label_water.png" /></p>      |
-| Unlabeled  | 155 | 155 | 155 | <p align="center"><img width = "30" height= "20" src="./readme/label_unlabeled.png" /></p>  |
+* Building: #3C1098
+* Land (unpaved area): #8429F6
+* Road: #6EC1E4
+* Vegetation: #FEDD3A
+* Water: #E2A929
+* Unlabeled: #9B9B9B
 
 As each tile contains images of different dimension we pachify the images into fixed dimension 256 X 256 and save those in directory as mention in setup section below. The pachify image dimension can be changed by `height` and `weight` variable inside the `config.yaml` file.
 
